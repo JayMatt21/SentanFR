@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: sentanfr-backend
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:app

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Admin</h2>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Register User</a></li>
+      <li><a href="#">Attendance Reports</a></li>
+      <li><a href="#">Generate Payslip</a></li>
+      <li><a href="#">Export CSV</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </div>
+  <div class="main">
+    <div class="topbar">
+      <h1>Welcome, {{ username }}</h1>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>Employees</h3>
+        <p>124</p>
+      </div>
+      <div class="card">
+        <h3>Reports Generated</h3>
+        <p>58</p>
+      </div>
+      <div class="card">
+        <h3>Payslips Printed</h3>
+        <p>12</p>
+      </div>
+    </div>
+    <div class="content">
+      <h2>Attendance Summary</h2>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>Juan Dela Cruz</td>
+          <td>2025-07-16</td>
+          <td>Present</td>
+        </tr>
+        <tr>
+          <td>Maria Clara</td>
+          <td>2025-07-16</td>
+          <td>Absent</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

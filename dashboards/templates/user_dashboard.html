@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>User</h2>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">My Attendance</a></li>
+      <li><a href="#">Payslip</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </div>
+  <div class="main">
+    <div class="topbar">
+      <h1>Welcome, {{ username }}</h1>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>Attendance Rate</h3>
+        <p>98%</p>
+      </div>
+      <div class="card">
+        <h3>Payslip</h3>
+        <p>₱15,000</p>
+      </div>
+    </div>
+    <div class="content">
+      <h2>My Attendance</h2>
+      <table>
+        <tr>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>2025-07-16</td>
+          <td>Present</td>
+        </tr>
+        <tr>
+          <td>2025-07-15</td>
+          <td>Present</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

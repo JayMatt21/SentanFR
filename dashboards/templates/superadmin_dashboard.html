@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SuperAdmin Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>SuperAdmin</h2>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">System Analytics</a></li>
+      <li><a href="#">Bug Reports</a></li>
+      <li><a href="#">Manage Admins</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </div>
+  <div class="main">
+    <div class="topbar">
+      <h1>Welcome, {{ username }}</h1>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>Total Admins</h3>
+        <p>5</p>
+      </div>
+      <div class="card">
+        <h3>Open Bugs</h3>
+        <p>2</p>
+      </div>
+      <div class="card">
+        <h3>System Uptime</h3>
+        <p>99.98%</p>
+      </div>
+    </div>
+    <div class="content">
+      <h2>Recent Logs</h2>
+      <table>
+        <tr>
+          <th>Date</th>
+          <th>Event</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>2025-07-16</td>
+          <td>Bug #234 Fixed</td>
+          <td>Resolved</td>
+        </tr>
+        <tr>
+          <td>2025-07-15</td>
+          <td>New Admin Added</td>
+          <td>Success</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
